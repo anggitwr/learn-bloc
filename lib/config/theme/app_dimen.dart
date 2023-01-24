@@ -26,4 +26,5 @@ class AppDimen{
   static double h16 = 16.0.h;
   static double h18 = 18.0.h;
   static double h20 = 20.0.h;
+  static double h40 = 40.0.h;
 }

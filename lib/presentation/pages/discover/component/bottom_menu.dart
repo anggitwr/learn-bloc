@@ -12,35 +12,27 @@ class BottomMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final cubit = BlocProvider.of<DiscoverCubit>(context);
     return Container(
-      height: 96.0.h,
+      height: 70.0,
+      margin: EdgeInsets.only(left: 70, right: 70),
       decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(16.0), topRight: Radius.circular(16.0)),
+        color: Colors.grey,
+        borderRadius: BorderRadius.all(Radius.circular(30)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           _buildItem(
             onTap: () => cubit.changeIndex(0),
-            icon: Icons.home,
-            title: 'Home',
-            isSelected: cubit.state.selectIndex == 0,
-          ),
-          _buildItem(
-            onTap: () => cubit.changeIndex(1),
-            icon: Icons.access_time,
-            title: 'Recently',
-            isSelected: cubit.state.selectIndex == 1,
-          ),
-          _buildItem(
-            onTap: () => cubit.changeIndex(2),
-            icon: Icons.settings,
-            title: 'Settings',
-            isSelected: cubit.state.selectIndex == 2,
+            icon: Icons.add,
+            isSelected: cubit.state.selectIndex == 0, title: '',
           ),
         ],
       ),
+      // floatingActionButton: FloatingActionButton.extended(
+      //   onPressed: (){},
+      //   icon: Icon(Icons.add),
+      //   label: Text("add"),
+      // ),
     );
   }
 
@@ -65,7 +57,7 @@ class BottomMenu extends StatelessWidget {
             style: TextStyle(
                 color: isSelected ? Colors.black : Colors.grey,
                 fontSize: 12.0.sp),
-          )
+          ),
         ],
       ),
     );

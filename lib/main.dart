@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:learn_bloc/presentation/pages/discover/discover_view.dart';
-import 'package:learn_bloc/presentation/pages/welcome/login/login_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-        builder: (context,child){
+      builder: (context, child) {
         return MaterialApp(
           title: 'App',
           theme: ThemeData(
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
           ),
           home: const DiscoverPage(),
         );
-        },
+      },
     );
   }
 }

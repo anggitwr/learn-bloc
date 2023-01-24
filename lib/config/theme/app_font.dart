@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:learn_bloc/config/theme/app_color.dart';
 
 class AppFont{
   static TextStyle get hero => TextStyle(
@@ -9,9 +10,9 @@ class AppFont{
   );
 
   static TextStyle get paragraf1 => TextStyle(
-      fontSize: 36.sp,
-      fontWeight: FontWeight.w400,
-      color: Colors.black
+      fontSize: 32.sp,
+      fontWeight: FontWeight.bold,
+      color: AppColor.ink07
   );
 
   static TextStyle get title => TextStyle(
