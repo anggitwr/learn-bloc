@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learn_bloc/presentation/pages/welcome/login/plan/component/your_plan.dart';
+import 'package:learn_bloc/presentation/pages/discover/plan/component/your_plan.dart';
 
 import 'plan_cubit.dart';
 import 'plan_state.dart';

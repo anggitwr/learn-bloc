@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learn_bloc/config/config.dart';
-import 'package:learn_bloc/presentation/pages/welcome/login/plan/plan_cubit.dart';
+import 'package:learn_bloc/presentation/pages/discover/plan/plan_cubit.dart';
+
 
 class YourPlan extends StatelessWidget {
   const YourPlan({Key? key}) : super(key: key);
@@ -19,7 +20,8 @@ class YourPlan extends StatelessWidget {
   Widget _header() {
     return Padding(
       padding: EdgeInsets.only(
-          left: AppDimen.w20, right: AppDimen.w10, top: AppDimen.h40),
+          left: AppDimen.w20, right: AppDimen.w10, top: AppDimen.h40
+      ),
       child: Row(
         children: [
           Text("Folders", style: AppFont.paragraf1),
@@ -39,7 +41,7 @@ class YourPlan extends StatelessWidget {
 
   Widget _folderItem() {
     return Container(
-      height: 172,
+      height: 150,
       margin: EdgeInsets.only(
           bottom: AppDimen.h10,
           left: AppDimen.w8,
@@ -61,13 +63,13 @@ class YourPlan extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "Personal Notes",
-                  style: AppFont.textnormal,
+                  "Title",
+                  style: AppFont.title,
                 ),
                 Text(
-                  "12",
-                  style: AppFont.hero,
-                )
+                  "isi note",
+                  style: AppFont.textnormal,
+                ),
               ],
             ),
           ),
