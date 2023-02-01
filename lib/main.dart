@@ -3,8 +3,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:learn_bloc/presentation/pages/addd/addd_view.dart';
 import 'package:learn_bloc/presentation/pages/discover/discover_view.dart';
 import 'package:learn_bloc/presentation/pages/welcome/login/login_view.dart';
+import 'package:logging/logging.dart';
 
 void main() {
+  Logger.root.level= Level.ALL;
+  Logger.root.onRecord.listen((record){
+    debugPrint('${record.level.name}: ${record.time}: ${record.message}');
+  });
+
   runApp(const MyApp());
 }
 
@@ -12,7 +18,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
-  @override
+  @override 
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(360, 690),

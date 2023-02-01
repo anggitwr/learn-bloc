@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learn_bloc/config/networking/api_client.dart';
 import 'package:learn_bloc/config/theme/app_color.dart';
 import 'package:learn_bloc/presentation/pages/addd/addd_view.dart';
 import 'package:learn_bloc/presentation/pages/discover/discover_state.dart';
@@ -11,8 +12,11 @@ import 'discover_cubit.dart';
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({super.key});
 
+
   @override
   Widget build(BuildContext context) {
+    final ApiClient apiClient = ApiClient();
+    apiClient.get(Uri.parse("https://6e8d1eaa-90cb-4313-9fa9-ee06ff131bf5.mock.pstmn.io/api/v1/plan"));
     return BlocProvider(
       create: (BuildContext context) => DiscoverCubit(),
       child: Builder(builder: (context) => _buildPage(context)),
